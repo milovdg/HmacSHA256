@@ -21,8 +21,6 @@ public class Main {
 
         String plainString = nonce + "|" + shopId + "|" + shopKey;
 
-        String signature = Hex.encodeHexString(hmacSha256.doFinal(plainString.getBytes()));
-
         return Hex.encodeHexString(hmacSha256.doFinal(plainString.getBytes()));
     }
 }
